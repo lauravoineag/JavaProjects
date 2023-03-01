@@ -1,14 +1,14 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class MainTest {
+class MarsRoverTest {
     @Test
-    void add() {
+    void when_I_pass_M_I_receive_0_1_N_() {
         //arrange
-        Main main = new Main();
+        MarsRover rover = new MarsRover();
         //act
-        var expected =5;
-        var actual=main.add(2,2);
+        var expected ="0:1:N";
+        var actual=rover.execute("M");
 
         //assert
         assertEquals(expected,actual);
