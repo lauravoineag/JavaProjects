@@ -4,15 +4,21 @@ public class MarsRover {
     private int _yPosition;
     private int _xPosition;
     private String _direction ="N";
+    private int _grid;
+
+    public MarsRover(int grid) {
+        _grid = grid;
+    }
 
     public String execute(String command) {
-        if (command == "M")
+        for (var item:command.toCharArray())
         {
-            _yPosition += 1;
-        }
-        else
-        {
-            _yPosition += 2;
+            if(_yPosition ==_grid-1){
+                _yPosition=0;
+            }
+            else {
+                _yPosition += 1;
+            }
         }
 
         return MessageFormat.format(

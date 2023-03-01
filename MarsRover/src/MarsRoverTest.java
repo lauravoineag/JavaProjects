@@ -8,7 +8,7 @@ class MarsRoverTest {
     @BeforeEach
     void setup(){
         //arrange
-        _rover = new MarsRover();
+        _rover = new MarsRover(3);
     }
     @Test
     void when_I_pass_M_I_receive_0_1_N() {
